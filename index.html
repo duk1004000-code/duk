@@ -15,20 +15,15 @@
     }
 
     body {
-      /* 이미지가 안 나올 때를 대비한 기본 베이지 톤 배경색 */
-      background-color: #f6ebd9; 
-      
-      /* 배경 이미지 설정 (경로와 대소문자 확인 필수!) */
-      background-image: url('bg.png.png'); 
+      background-color: #f6ebd9; /* 이미지가 안 나올 때를 대비한 기본 베이지 톤 배경색 */
+      background-image: url('bg.png'); /* 깃허브에 올린 이미지 파일명 */
       background-repeat: no-repeat;
       background-position: center top;
-      background-size: contain; /* 이미지 비율을 깨뜨리지 않고 가로에 맞춤 */
-      
-      /* 모바일 화면 등에서 화면이 깨지지 않도록 방지 */
+      background-size: contain; /* 이미지 비율을 유지하며 가로 화면에 맞춤 */
       min-height: 100vh;
       display: flex;
       flex-direction: column;
-      justify-content: flex-end; /* 입력창을 항상 화면 하단에 배치 */
+      justify-content: flex-end; /* 입력창을 화면 하단에 배치 */
       align-items: center;
     }
 
@@ -119,10 +114,8 @@
 </head>
 <body>
 
-  <!-- 입력창 구역 -->
   <div class="form-container">
-    <!-- Formspree 고유 주소를 아래 XXXXXX 자리에 새로 넣어주세요 -->
-    <form action="https://formspree.io/f/XXXXXX" method="POST">
+    <form action="https://api.sheetmonkey.io/form/awkDjKAMY3DeQ2XfPre6J6" method="POST">
       
       <div class="input-group">
         <label>성함</label>
@@ -131,7 +124,7 @@
       
       <div class="input-group">
         <label>연락처</label>
-        <input type="tel" name="연락처" placeholder="연락처를 입력해주세요" required>
+        <input type="tel" name="전화번호" placeholder="연락처를 입력해주세요" required>
       </div>
       
       <button type="submit" class="submit-btn">
