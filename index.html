@@ -25,12 +25,14 @@
     }
 
     /* ⚠️ 이미지 속 하단 흰색 입력창 구역 바로 위에 투명하게 얹어놓는 박스 */
-    .form-overlay {
+.form-overlay {
       position: absolute;
-      bottom: 2%; /* 밑에서부터의 위치 (정렬이 안 맞으면 이 수치를 조절하세요) */
-      left: 5%;
-      width: 90%;
-      height: 150px; /* 입력창과 버튼이 들어갈 높이 */
+      bottom: 2%; /* 밑에서부터의 위치 */
+      left: 50%;  /* 화면 중앙 정렬을 위한 설정 */
+      transform: translateX(-50%); /* 화면 중앙 정렬을 위한 설정 */
+      width: 85%;  /* 90%에서 85%로 줄여 양옆에 여백을 더 줬습니다 */
+      max-width: 340px; /* ⚠️ 아무리 화면이 커져도 입력창이 이 크기 이상으로 길어지지 않게 고정! */
+      height: 150px;
       box-sizing: border-box;
     }
 
