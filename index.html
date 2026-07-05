@@ -7,7 +7,7 @@
   <style>
     /* 1. 배경 이미지 설정 */
     body {
-      background-image: url('bg.png'); /* 1단계에서 올린 이미지 파일명과 같아야 합니다 */
+      background-image: url('bg.png'); /* 깃허브에 올리신 이미지 파일명 */
       background-repeat: no-repeat;
       background-position: center top;
       background-size: cover;
@@ -25,7 +25,7 @@
       left: 50%;
       transform: translateX(-50%);
       width: 90%;
-      max-width: 1200px;
+      max-width: 1000px; /* 입력창이 줄어들었으므로 전체 폭을 소폭 축소하여 깔끔하게 배치 */
       background-color: #ffffff;
       border-radius: 16px;
       padding: 24px;
@@ -43,7 +43,7 @@
 
     .input-group {
       flex: 1;
-      min-width: 180px;
+      min-width: 200px; /* 두 개의 창이 널찍하게 보이도록 최소 폭 조정 */
       display: flex;
       flex-direction: column;
       gap: 8px;
@@ -75,11 +75,11 @@
     /* 3. 무료 상담 신청하기 버튼 디자인 */
     .submit-btn {
       height: 48px;
-      background-color: #1a2536; /* 이미지와 유사한 어두운 네이비 */
+      background-color: #1a2536; 
       color: #ffffff;
       border: none;
       border-radius: 8px;
-      padding: 0 28px;
+      padding: 0 32px;
       font-size: 15px;
       font-weight: bold;
       cursor: pointer;
@@ -108,7 +108,9 @@
 </head>
 <body>
 
+  <!-- 입력창 구역 -->
   <div class="form-container">
+    <!-- Formspree에서 발급받은 고유 주소를 아래 action="주소" 부분에 넣어주세요 -->
     <form action="https://formspree.io/f/XXXXXX" method="POST">
       
       <div class="input-group">
@@ -119,16 +121,6 @@
       <div class="input-group">
         <label>연락처</label>
         <input type="tel" name="연락처" placeholder="연락처를 입력해주세요" required>
-      </div>
-      
-      <div class="input-group">
-        <label>희망금액</label>
-        <input type="text" name="희망금액" placeholder="예) 3,000만원" required>
-      </div>
-      
-      <div class="input-group">
-        <label>직업</label>
-        <input type="text" name="직업" placeholder="직업을 입력해주세요" required>
       </div>
       
       <button type="submit" class="submit-btn">
