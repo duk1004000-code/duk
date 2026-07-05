@@ -27,12 +27,12 @@
     /* ⚠️ 이미지 속 하단 흰색 입력창 구역 바로 위에 투명하게 얹어놓는 박스 */
 .form-overlay {
       position: absolute;
-      bottom: 2%; /* 밑에서부터의 위치 */
-      left: 50%;  /* 화면 중앙 정렬을 위한 설정 */
-      transform: translateX(-50%); /* 화면 중앙 정렬을 위한 설정 */
-      width: 85%;  /* 90%에서 85%로 줄여 양옆에 여백을 더 줬습니다 */
-      max-width: 340px; /* ⚠️ 아무리 화면이 커져도 입력창이 이 크기 이상으로 길어지지 않게 고정! */
-      height: 150px;
+      bottom: 2%; 
+      left: 50%;  
+      transform: translateX(-50%); 
+      width: 85%;  
+      max-width: 340px; 
+      height: 160px; /* 세로 배열에 맞게 구역 높이 최적화 */
       box-sizing: border-box;
     }
 
@@ -44,19 +44,21 @@
     }
 
     /* 실제 입력이 가능한 투명 투입구 배치 */
-    .input-row {
+.input-row {
       display: flex;
-      gap: 10px;
+      flex-direction: column; /* 세로로 한 칸씩 쌓이게 만드는 명령어 */
+      gap: 8px; /* 성함 칸과 전화번호 칸 사이의 간격 */
     }
 
+    /* 3. 입력창 자체의 세로 높이를 살짝 줄여 더 깔끔하게 만듦 */
     .real-input {
-      flex: 1;
-      height: 44px;
+      width: 100%;
+      height: 40px; /* 44px에서 40px로 조절하여 콤팩트하게 변경 */
       padding: 0 12px;
       border: 1px solid #cccccc;
       border-radius: 6px;
       font-size: 14px;
-      background-color: rgba(255, 255, 255, 0.95); /* 살짝 투명한 흰색 */
+      background-color: rgba(255, 255, 255, 0.95); 
       box-sizing: border-box;
     }
 
